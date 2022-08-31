@@ -1,1 +1,17 @@
-<p>task works!</p>
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between
+    align-item-center ">
+        {{task.title}}
+    <div>
+        <button class="btn btn-primary" (click)="task.hide = !task.hide">
+            Show
+        </button>
+        <button class="btn btn-danger" (click)="deleteTask(index)">
+            Delete
+        </button>
+    </div>
+    </div>
+    <div class="card-body" [hidden]="task.hide">
+        {{task.description}}
+    </div>
+</div>
